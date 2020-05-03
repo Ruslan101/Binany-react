@@ -661,7 +661,7 @@ img[alt='back'] {
 	align-items: center;
 }
 .calendars > div, .type_operations > div {
-	width: 120px;
+	width: auto;
 	height: 20px;
 	padding: 20px 12px 20px 12px;
 	border: #e7ebf0 solid 1px;
@@ -674,7 +674,8 @@ img[alt='back'] {
 .calendars > div > p {
 	color: #191f2d;
 	font-size: 14px;
-	font-family: "MuseoSansCyrl light";	
+	font-family: "MuseoSansCyrl light";
+	margin-left: 10px;
 }
 .calendars > p {
 	color: #191f2d;

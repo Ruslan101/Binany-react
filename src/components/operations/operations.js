@@ -1,21 +1,17 @@
 import React from 'react';
-import moment from 'moment';
 import calendar from '../../img/calendar.png';
 import down_currency from '../../img/down_currency.png';
-import InputCalendar from './input.js';
 
 export default class Operations extends React.Component {
     constructor(props) {
         super(props);
 
-        this.nowDate = moment().format("YYYY MMMM Do");
-
-        this.state = { fromDate: this.nowDate, toDate: this.nowDate, moment: moment() };
+        this.state = { fromDate: "", toDate: "" };
     }
-    handleSelect = (e, i) => {console.log('saved', this.state.moment.format('llll')); return 0;
+    handleSelect = (e, i) => {
         if(i == 0)
             this.setState({ fromDate: e.target.value });
-        else
+        else if(i == 1)
             this.setState({ toDate: e.target.value });
     }
     render() {
@@ -30,12 +26,12 @@ export default class Operations extends React.Component {
                             <p>Периуд</p>
                             <div className="calendars">
                                 <div>
-                                    <InputCalendar /> 
+                                    <input type="date" src={calendar} onChange={(e) => this.handleSelect(e, 0)} alt="calendar" />
                                     <p>{this.state.fromDate}</p>
                                 </div>
                                 <p>–</p>
-                                <div>
-                                <input type="date" src={calendar} onChange={(e) => this.onDateSelect(e, 1)} alt="calendar" />
+                                <div> 
+                                    <input type="date" src={calendar} onChange={(e) => this.handleSelect(e, 1)} alt="calendar" />
                                     <p>{this.state.toDate}</p>
                                 </div>
                             </div>
