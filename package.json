@@ -10,7 +10,6 @@
     "cross-env": "^7.0.2",
     "react": "^16.13.1",
     "react-aria-menubutton": "^6.3.0",
-    "react-bootstrap-date-picker-pf": "^5.0.1",
     "react-dates": "^21.8.0",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
